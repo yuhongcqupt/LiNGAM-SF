@@ -1,5 +1,18 @@
 # Project Readme
 
+## Citation
+If you find this code or our work useful for your research, please cite the following paper:
+```bibtex
+@ARTICLE{10851382,
+  author={Zhang, Chenglin and Yu, Hong and Wang, Guoyin and Xie, Yongfang},
+  journal={IEEE Transactions on Neural Networks and Learning Systems}, 
+  title={{LiNGAM-SF}: Causal Structural Learning Method With Linear Non-Gaussian Acyclic Models for Streaming Features}, 
+  year={2025},
+  volume={36},
+  number={6},
+  pages={10693-10706}
+}
+```
 ## Implementation Environment
 The method is implemented using **MATLAB**.
 
