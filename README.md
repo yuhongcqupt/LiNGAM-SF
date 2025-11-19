@@ -1,18 +1,30 @@
+# Project Readme
 
-#### **LiNGAM-SF: Causal Structural Learning Method with Linear Non-Gaussian Acyclic Models for Streaming Features**
+## Implementation Environment
+The method is implemented using **MATLAB**.
 
-**This source code accompanies the paper "LiNGAM-SF: Causal Structural Learning Method with Linear Non-Gaussian Acyclic Models for Streaming Features" (submited to TNNLS).  This work describes how to learn causal structures for streaming features  with linear non-Gaussian acyclic models. We will  make our code publicly available upon accepttance.**
+## Project Structure
 
-**The files in the folder "data" are used for testing our method:**
+- **`/details`**: Contains essential modules for the core method.
+- **`/tools`**: Contains necessary utility modules for the method.
+- **`/generateData`**: Used for generating synthetic data.
 
-- **The *generateData.m* is used for generating the synthetic data based on known causal structures.**
-- **The *XXX.mat* in the subfolder  "XXX" is data generated for  experiments in the paper.  Note: You can use the file to generateData.m to generate more data.**
-- **The *realData.csv* involves preprocessed data from the website [Yahoo Finance database](https://help.yahoo.com/kb/sln2311.html).**
+## Data Generation Process
 
-**The files in the folder "Method" are our proposed method:**
+1.  Run `generateData.m`.
+2.  Key parameters in the code:
+    - `testNum`: Number of datasets to generate.
+    - `data/dname`: The underlying structure `XX` used for data generation.
+        - **Note**: The causal structures are defined in `getDAGXX.m`. Users can define their own causal structures by using the provided files as a template.
+    - `num`: Number of feature variables.
+    - `groupPart`: Number of variables observed at each time step.
+3.  The generated results (including observed data `.dat` and the order of streaming features `.txt`) are saved in the corresponding folder XX (e.g., `sachs`, `pigs`).
+- **Note**: You should create a new folder named XX.
 
-- **The main function for  learning the causal structural  is in file *LiNGAMSF.m*.**
-- **The *sensitivity\_analysis.m* file serves as an experiment parameter sensitivity.**ing
-- **The *ablation\_analysis.m* file constitutes an ablation experiment**
+## Method Execution Process
 
-**The files in the folder "others" are comparative method.**
+1.  Run `test_MyMethod.m`.
+2.  Key parameters in the code:
+    - `rootFile`: Location of the input data (should match the output location from `generateData.m`).
+    - `RSFile`: Location for storing the final results.
+    - `RStemp`: Location for storing intermediate results.
